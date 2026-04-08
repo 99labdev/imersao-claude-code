@@ -75,10 +75,10 @@ export default function Checkout() {
               <span className="font-label text-xs uppercase opacity-50 block">Investimento</span>
               <div className="flex items-baseline gap-3">
                 <span className="font-label text-xl opacity-40 line-through">R$ 497</span>
-                <span className="font-headline text-5xl md:text-6xl font-bold text-primary">R$ 49</span>
+                <span className="font-headline text-5xl md:text-6xl font-bold text-primary">R$ 47</span>
               </div>
               <span className="font-label text-[10px] uppercase tracking-widest opacity-50 block">
-                Lote promocional · Pix · Cartão · Boleto
+                Lote promocional · Pix · Cartão
               </span>
             </div>
             <div className="space-y-4">
@@ -102,7 +102,7 @@ export default function Checkout() {
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary text-lg">check_circle</span>
-                  Garantia incondicional de 7 dias
+                  Garantia de 7 dias
                 </li>
               </ul>
             </div>

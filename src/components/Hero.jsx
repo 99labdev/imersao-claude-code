@@ -5,7 +5,7 @@ import sunburst from '../assets/sunburst.png'
 
 export default function Hero() {
   return (
-    <section className="relative max-w-7xl mx-auto px-4 sm:px-8 py-8 md:py-12 flex flex-col items-center overflow-hidden">
+    <section id="hero" className="relative max-w-7xl mx-auto px-4 sm:px-8 py-8 md:py-12 flex flex-col items-center overflow-hidden scroll-mt-24">
       {/* ===== Mobile layout (stacked, < md) ===== */}
       <div className="md:hidden w-full flex flex-col items-center gap-8 relative">
         <div className="absolute inset-0 grid-pattern opacity-10 pointer-events-none"></div>

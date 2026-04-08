@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
+import Speaker from './components/Speaker.jsx'
 import Checkout from './components/Checkout.jsx'
 import Faq from './components/Faq.jsx'
 import Footer from './components/Footer.jsx'
@@ -10,6 +11,7 @@ export default function App() {
       <Navbar />
       <main className="relative pt-24">
         <Hero />
+        <Speaker />
         <Checkout />
         <Faq />
       </main>

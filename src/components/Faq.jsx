@@ -31,7 +31,7 @@ export default function Faq() {
   const [open, setOpen] = useState(0)
 
   return (
-    <section className="max-w-4xl mx-auto px-4 sm:px-8 py-12 md:py-20 relative">
+    <section id="faq" className="max-w-4xl mx-auto px-4 sm:px-8 py-12 md:py-20 relative scroll-mt-24">
       <div className="text-center mb-10 md:mb-14">
         <p className="font-label text-xs uppercase tracking-widest text-primary opacity-70 mb-3">
           FAQ
