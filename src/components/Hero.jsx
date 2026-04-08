@@ -53,9 +53,12 @@ export default function Hero() {
 
       {/* ===== CTA (compartilhado) ===== */}
       <div className="mt-12 md:mt-24 flex flex-col items-center gap-6 md:gap-8 z-10 w-full">
-        <button className="bg-primary hover:bg-on-primary-container text-white w-full sm:w-auto px-8 sm:px-12 py-5 md:py-6 rounded-xl font-label text-base md:text-lg transition-all flex items-center justify-center gap-4 shadow-2xl hover:scale-105 active:scale-95 duration-300">
+        <a
+          href="#checkout"
+          className="bg-primary hover:bg-on-primary-container text-white w-full sm:w-auto px-8 sm:px-12 py-5 md:py-6 rounded-xl font-label text-base md:text-lg transition-all flex items-center justify-center gap-4 shadow-2xl hover:scale-105 active:scale-95 duration-300"
+        >
           Garanta sua vaga <span className="material-symbols-outlined">arrow_forward</span>
-        </button>
+        </a>
         <p className="max-w-xl text-center font-body text-sm text-secondary italic opacity-70 px-2">
           Uma masterclass em precisão técnica. Unindo a lacuna entre o design arquitetônico criativo e agentes de código de IA avançados.
         </p>

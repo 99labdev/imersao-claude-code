@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import Checkout from './components/Checkout.jsx'
+import Faq from './components/Faq.jsx'
 import Footer from './components/Footer.jsx'
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
       <main className="relative pt-24">
         <Hero />
         <Checkout />
+        <Faq />
       </main>
       <Footer />
     </div>

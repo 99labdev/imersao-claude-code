@@ -22,7 +22,7 @@ export default function Checkout() {
   }, [])
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-8 py-8 md:py-12 relative">
+    <section id="checkout" className="max-w-7xl mx-auto px-4 sm:px-8 py-8 md:py-12 relative scroll-mt-24">
       <div className="bg-inverse-surface text-surface-container-lowest p-6 sm:p-8 md:p-12 rounded-xl shadow-2xl relative overflow-hidden group">
         <div className="absolute top-0 left-0 w-full h-1 bg-primary/30"></div>
         <div className="flex items-center gap-2 mb-8">
@@ -111,7 +111,7 @@ export default function Checkout() {
                 Garantir minha vaga <span className="material-symbols-outlined">arrow_forward</span>
               </button>
               <p className="mt-4 text-center font-label text-[10px] uppercase tracking-widest opacity-40">
-                300 vagas · 14h · Ao vivo e online
+                100 vagas · 14h · Ao vivo e online
               </p>
             </div>
           </div>
