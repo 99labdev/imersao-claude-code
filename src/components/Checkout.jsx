@@ -37,34 +37,34 @@ export default function Checkout() {
           {/* Content Column */}
           <div className="space-y-4">
             <p className="font-label text-lg md:text-xl text-primary font-bold tracking-tight">
-              1 dia para colocar times de I.A rodando na sua operação
+              Sua operação rodando com I.A em uma única tarde
             </p>
             <div className="font-label text-sm leading-relaxed opacity-80 space-y-4">
               <p>
-                <span className="text-primary-container font-bold">user@claude:~$</span> Em apenas 1 dia, saia com times de I.A construídos no Claude Code rodando na sua operação — substituindo funções e ferramentas que hoje custam até R$20.000 por mês na sua empresa.
+                <span className="text-primary-container font-bold">user@claude:~$</span> Em poucas horas você sai com um time de I.A construído ao vivo no Claude Code, pronto para assumir tarefas que hoje consomem até R$20.000 por mês entre ferramentas e pessoas na sua empresa.
               </p>
               <p>
-                Não é slide com teoria. Não é mais um curso que você assiste e esquece. É 1 dia inteiro ao vivo, construindo junto conosco um time de I.A completo dentro do Claude e pronto para trabalhar na sua operação.
+                Esqueça apresentações de slide e cursos esquecidos na gaveta. Aqui é mão na massa do começo ao fim — você constrói junto, testa junto e sai com algo funcionando de verdade dentro do seu negócio.
               </p>
               <div className="space-y-2">
-                <p className="text-primary font-bold uppercase tracking-wider">[Os 4 pilares da imersão]</p>
+                <p className="text-primary font-bold uppercase tracking-wider">[A jornada em 4 etapas]</p>
                 <p>
-                  <span className="text-primary-container font-bold">01 Mapear</span> — descubra onde sua operação está sangrando e saia com os 3 maiores gargalos mapeados.<br />
-                  <span className="text-primary-container font-bold">02 Construir</span> — crie cada funcionário da sua operação como uma Skill especializada, sem código e sem programador.<br />
-                  <span className="text-primary-container font-bold">03 Automatizar</span> — conecte tudo em fluxos completos rodando sem você no meio do caminho.<br />
-                  <span className="text-primary-container font-bold">04 Escalar</span> — transforme novos gargalos em novas Skills, dentro ou fora do seu negócio.
+                  <span className="text-primary-container font-bold">01 Diagnosticar</span> — identifique onde seu tempo e dinheiro estão escapando e priorize os 3 pontos mais críticos.<br />
+                  <span className="text-primary-container font-bold">02 Montar</span> — transforme cada função da operação numa Skill especializada do Claude, sem precisar saber programar.<br />
+                  <span className="text-primary-container font-bold">03 Orquestrar</span> — encadeie as Skills em fluxos completos que rodam sozinhos enquanto você cuida de outras coisas.<br />
+                  <span className="text-primary-container font-bold">04 Multiplicar</span> — replique o método em novos gargalos da sua empresa ou ofereça como serviço para outras.
                 </p>
               </div>
               <div className="space-y-2">
-                <p className="text-primary font-bold uppercase tracking-wider">[Para quem é essa imersão]</p>
+                <p className="text-primary font-bold uppercase tracking-wider">[Feita sob medida para]</p>
                 <p>
-                  Agências de marketing, negócios digitais, empresários com time e exércitos de 1 pessoa só que querem parar de depender de custo fixo pesado para executar o que o Claude já pode fazer por centavos. Não é necessário experiência técnica nem conhecimento de programação.
+                  Donos de agência, negócios digitais, empresários com equipe e profissionais solo que querem trocar o custo fixo de ferramentas e pessoas por uma operação inteligente que custa centavos por execução. Zero pré-requisito técnico — se você sabe explicar o que precisa, já dá.
                 </p>
               </div>
               <div className="space-y-2">
-                <p className="text-primary font-bold uppercase tracking-wider">[O que você leva dessa experiência]</p>
+                <p className="text-primary font-bold uppercase tracking-wider">[Você sai daqui com]</p>
                 <p>
-                  Seu time de I.A criado ao vivo, operação rodando sem você, sistema replicável e uma metodologia de diagnóstico para mapear os gargalos da sua operação — além do acesso às estruturas que usamos internamente.
+                  Um time de I.A construído ao vivo na sua frente, fluxos automatizados em produção, um método replicável para qualquer novo gargalo que aparecer e acesso direto às estruturas que já usamos internamente nos nossos próprios projetos.
                 </p>
               </div>
             </div>
@@ -107,9 +107,14 @@ export default function Checkout() {
               </ul>
             </div>
             <div className="pt-6">
-              <button className="bg-primary hover:bg-on-primary-container text-white w-full py-5 md:py-6 rounded-xl font-label text-lg md:text-xl transition-all shadow-xl hover:-translate-y-1 flex justify-center items-center gap-3">
+              <a
+                href="https://pay.kiwify.com.br/Xeg2n8T"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary hover:bg-on-primary-container text-white w-full py-5 md:py-6 rounded-xl font-label text-lg md:text-xl transition-all shadow-xl hover:-translate-y-1 flex justify-center items-center gap-3"
+              >
                 Garantir minha vaga <span className="material-symbols-outlined">arrow_forward</span>
-              </button>
+              </a>
               <p className="mt-4 text-center font-label text-[10px] uppercase tracking-widest opacity-40">
                 100 vagas · 14h · Ao vivo e online
               </p>
