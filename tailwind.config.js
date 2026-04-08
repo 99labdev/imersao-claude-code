@@ -64,6 +64,15 @@ export default {
         body: ['Space Grotesk', 'monospace'],
         label: ['Space Grotesk', 'monospace'],
       },
+      keyframes: {
+        'paper-bounce': {
+          '0%, 100%': { transform: 'translateY(0) rotate(-3deg)' },
+          '50%': { transform: 'translateY(14px) rotate(-3deg)' },
+        },
+      },
+      animation: {
+        'paper-bounce': 'paper-bounce 2.2s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

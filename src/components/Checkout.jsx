@@ -1,4 +1,26 @@
+import { useEffect, useState } from 'react'
+
+const LOTE_AT = new Date('2026-05-02T14:00:00-03:00').getTime()
+
+function formatRemaining(ms) {
+  if (ms <= 0) return 'Lote encerrado'
+  const totalHours = Math.floor(ms / (1000 * 60 * 60))
+  const days = Math.floor(totalHours / 24)
+  const hours = totalHours % 24
+  const minutes = Math.floor((ms / (1000 * 60)) % 60)
+  const seconds = Math.floor((ms / 1000) % 60)
+  if (days > 0) return `Lote encerra em ${days}d ${hours}h ${minutes}m ${seconds}s`
+  return `Lote encerra em ${hours}h ${minutes}m ${seconds}s`
+}
+
 export default function Checkout() {
+  const [remaining, setRemaining] = useState(() => LOTE_AT - Date.now())
+
+  useEffect(() => {
+    const id = setInterval(() => setRemaining(LOTE_AT - Date.now()), 1000)
+    return () => clearInterval(id)
+  }, [])
+
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-8 py-8 md:py-12 relative">
       <div className="bg-inverse-surface text-surface-container-lowest p-6 sm:p-8 md:p-12 rounded-xl shadow-2xl relative overflow-hidden group">
@@ -8,38 +30,41 @@ export default function Checkout() {
           <div className="w-3 h-3 rounded-full bg-primary"></div>
           <div className="w-3 h-3 rounded-full bg-tertiary"></div>
           <span className="ml-4 font-label text-xs opacity-50 uppercase tracking-tighter">
-            Terminal — v4.5.0-sonnet
+            Operação Claude Code
           </span>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Content Column */}
           <div className="space-y-4">
             <p className="font-label text-lg md:text-xl text-primary font-bold tracking-tight">
-              Checkout: Garanta sua Imersão Claude Code
+              1 dia para colocar times de I.A rodando na sua operação
             </p>
             <div className="font-label text-sm leading-relaxed opacity-80 space-y-4">
               <p>
-                <span className="text-primary-container font-bold">user@claude:~$</span> Você já imaginou criar sites, automatizar tarefas e desenvolver ferramentas digitais sem escrever uma única linha de código do zero? Na Imersão Claude Code, você vai descobrir como usar a inteligência artificial como seu parceiro de desenvolvimento — mesmo sem ter formação técnica.
+                <span className="text-primary-container font-bold">user@claude:~$</span> Em apenas 1 dia, saia com times de I.A construídos no Claude Code rodando na sua operação — substituindo funções e ferramentas que hoje custam até R$20.000 por mês na sua empresa.
               </p>
               <p>
-                O Claude Code é uma ferramenta da Anthropic que permite criar projetos completos direto do terminal, usando linguagem natural. Você descreve o que precisa, e a IA constrói para você: landing pages, automações, planilhas inteligentes, aplicativos simples e muito mais.
+                Não é slide com teoria. Não é mais um curso que você assiste e esquece. É 1 dia inteiro ao vivo, construindo junto conosco um time de I.A completo dentro do Claude e pronto para trabalhar na sua operação.
               </p>
               <div className="space-y-2">
-                <p className="text-primary font-bold uppercase tracking-wider">[O que você vai aprender]</p>
+                <p className="text-primary font-bold uppercase tracking-wider">[Os 4 pilares da imersão]</p>
                 <p>
-                  Durante a imersão, vamos sair do zero e chegar a resultados práticos. Você vai entender como dar comandos claros para a IA, como revisar e ajustar o que ela entrega, e como transformar suas ideias em projetos funcionais — tudo isso com exemplos reais do dia a dia de profissionais de saúde, direito, marketing e educação.
+                  <span className="text-primary-container font-bold">01 Mapear</span> — descubra onde sua operação está sangrando e saia com os 3 maiores gargalos mapeados.<br />
+                  <span className="text-primary-container font-bold">02 Construir</span> — crie cada funcionário da sua operação como uma Skill especializada, sem código e sem programador.<br />
+                  <span className="text-primary-container font-bold">03 Automatizar</span> — conecte tudo em fluxos completos rodando sem você no meio do caminho.<br />
+                  <span className="text-primary-container font-bold">04 Escalar</span> — transforme novos gargalos em novas Skills, dentro ou fora do seu negócio.
                 </p>
               </div>
               <div className="space-y-2">
-                <p className="text-primary font-bold uppercase tracking-wider">[Para quem é essa imersão?]</p>
+                <p className="text-primary font-bold uppercase tracking-wider">[Para quem é essa imersão]</p>
                 <p>
-                  Para empreendedores, profissionais liberais e criadores de conteúdo que querem usar tecnologia a seu favor sem depender de um desenvolvedor para cada necessidade. Se você sabe explicar o que precisa, já tem a habilidade mais importante.
+                  Agências de marketing, negócios digitais, empresários com time e exércitos de 1 pessoa só que querem parar de depender de custo fixo pesado para executar o que o Claude já pode fazer por centavos. Não é necessário experiência técnica nem conhecimento de programação.
                 </p>
               </div>
               <div className="space-y-2">
                 <p className="text-primary font-bold uppercase tracking-wider">[O que você leva dessa experiência]</p>
                 <p>
-                  Autonomia para criar soluções digitais, economia de tempo e dinheiro, e uma nova forma de pensar sobre tecnologia — não como algo distante, mas como uma ferramenta acessível que trabalha para você.
+                  Seu time de I.A criado ao vivo, operação rodando sem você, sistema replicável e uma metodologia de diagnóstico para mapear os gargalos da sua operação — além do acesso às estruturas que usamos internamente.
                 </p>
               </div>
             </div>
@@ -48,41 +73,52 @@ export default function Checkout() {
           <div className="flex flex-col justify-center lg:border-l lg:border-surface-variant/10 lg:pl-12 space-y-8 pt-8 lg:pt-0 border-t lg:border-t-0 border-surface-variant/10">
             <div className="space-y-2">
               <span className="font-label text-xs uppercase opacity-50 block">Investimento</span>
-              <div className="flex items-baseline gap-2">
-                <span className="font-headline text-5xl md:text-6xl font-bold text-primary">R$ 47</span>
-                <span className="font-label text-xs opacity-50 uppercase">/ Acesso total</span>
+              <div className="flex items-baseline gap-3">
+                <span className="font-label text-xl opacity-40 line-through">R$ 497</span>
+                <span className="font-headline text-5xl md:text-6xl font-bold text-primary">R$ 49</span>
               </div>
+              <span className="font-label text-[10px] uppercase tracking-widest opacity-50 block">
+                Lote promocional · Pix · Cartão · Boleto
+              </span>
             </div>
             <div className="space-y-4">
-              <p className="text-primary font-bold uppercase tracking-wider text-xs">Benefícios Incluídos:</p>
+              <p className="text-primary font-bold uppercase tracking-wider text-xs">O que está incluído:</p>
               <ul className="font-label text-sm space-y-3 uppercase tracking-wide">
                 <li className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary text-lg">check_circle</span>
-                  Acesso a imersão de 5h
+                  4h de imersão ao vivo — 2 de Maio, 14h
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary text-lg">check_circle</span>
-                  Acesso a comunidade no WhatsApp
+                  Implementação ao vivo dos 4 pilares
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary text-lg">check_circle</span>
-                  Acesso a comunidade do Discord
+                  Metodologia de diagnóstico da operação
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-primary text-lg">check_circle</span>
+                  Acesso às estruturas que usamos internamente
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-primary text-lg">check_circle</span>
+                  Garantia incondicional de 7 dias
                 </li>
               </ul>
             </div>
             <div className="pt-6">
               <button className="bg-primary hover:bg-on-primary-container text-white w-full py-5 md:py-6 rounded-xl font-label text-lg md:text-xl transition-all shadow-xl hover:-translate-y-1 flex justify-center items-center gap-3">
-                Compre agora <span className="material-symbols-outlined">arrow_forward</span>
+                Garantir minha vaga <span className="material-symbols-outlined">arrow_forward</span>
               </button>
               <p className="mt-4 text-center font-label text-[10px] uppercase tracking-widest opacity-40">
-                Turma 04 — Limitado a 150 vagas
+                300 vagas · 14h · Ao vivo e online
               </p>
             </div>
           </div>
         </div>
         <div className="mt-12 pt-4 border-t border-surface-variant/10">
           <p className="font-label text-xs text-outline-variant italic text-right">
-            Último acesso: Qua 23 Abr 08:42:15 no console
+            {formatRemaining(remaining)}
           </p>
         </div>
       </div>

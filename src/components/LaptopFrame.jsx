@@ -1,8 +1,57 @@
+import { useEffect, useState } from 'react'
 import PixelChar from './PixelChar.jsx'
 
+const IMERSAO_AT = new Date('2026-05-02T14:00:00-03:00').getTime()
+
+function formatRemaining(ms) {
+  if (ms <= 0) return 'Oferta encerrada'
+  const totalHours = Math.floor(ms / (1000 * 60 * 60))
+  const days = Math.floor(totalHours / 24)
+  const hours = totalHours % 24
+  const minutes = Math.floor((ms / (1000 * 60)) % 60)
+  const seconds = Math.floor((ms / 1000) % 60)
+  if (days > 0) return `Oferta acaba em ${days}d ${hours}h ${minutes}m ${seconds}s`
+  return `Oferta acaba em ${hours}h ${minutes}m ${seconds}s`
+}
+
+const WELCOME_TEXT = 'Bem vindo a imersão'
+
 export default function LaptopFrame() {
+  const [remaining, setRemaining] = useState(() => IMERSAO_AT - Date.now())
+  const [typed, setTyped] = useState('')
+
+  useEffect(() => {
+    const id = setInterval(() => setRemaining(IMERSAO_AT - Date.now()), 1000)
+    return () => clearInterval(id)
+  }, [])
+
+  useEffect(() => {
+    let i = 0
+    let deleting = false
+    const tick = () => {
+      if (!deleting) {
+        i++
+        setTyped(WELCOME_TEXT.slice(0, i))
+        if (i === WELCOME_TEXT.length) {
+          deleting = true
+          return setTimeout(tick, 10000)
+        }
+        return setTimeout(tick, 90)
+      }
+      i--
+      setTyped(WELCOME_TEXT.slice(0, i))
+      if (i === 0) {
+        deleting = false
+        return setTimeout(tick, 600)
+      }
+      return setTimeout(tick, 45)
+    }
+    const t = setTimeout(tick, 400)
+    return () => clearTimeout(t)
+  }, [])
+
   return (
-    <div className="relative w-[70%] z-20">
+    <div className="relative w-[70%] mx-auto z-20">
       {/* Screen Top */}
       <div className="bg-[#1c1c19] rounded-t-2xl p-1.5 shadow-2xl border-t border-x border-white/10">
         <div className="aspect-[16/10] bg-[#0d0d0d] rounded-lg relative overflow-hidden border border-white/5 flex flex-col">
@@ -15,19 +64,20 @@ export default function LaptopFrame() {
           {/* Terminal Content */}
           <div className="p-6 font-mono text-[10px] md:text-xs text-white/70 space-y-4 flex-1">
             <div className="flex justify-between items-start opacity-40 italic">
-              <span>Claude Code v1.0.8</span>
+              <span>Imersão Claude Code</span>
               <div className="text-right">
-                <p>Revert molidity</p>
-                <p>9s ago updated tra/hst memory</p>
-                <p>9p ago updated root</p>
+                <p>{formatRemaining(remaining)}</p>
               </div>
             </div>
             <div className="flex flex-col items-center justify-center py-4 space-y-4">
-              <p className="text-white/90 text-sm">Welcome back Meaghan!</p>
+              <p className="text-white/90 text-sm">
+                {typed}
+                <span className="inline-block w-[1ch] animate-pulse">|</span>
+              </p>
               <PixelChar className="scale-[2]" />
               <div className="text-center opacity-40">
-                <p>Sonnet 4.5 — Max 28h</p>
-                <p>/users/mrygham/cafe/apps</p>
+                <p>2 de Maio - 14h00</p>
+                <p>online</p>
               </div>
             </div>
             <div className="pt-8 border-t border-white/5 flex justify-between text-[8px] md:text-[10px]">
