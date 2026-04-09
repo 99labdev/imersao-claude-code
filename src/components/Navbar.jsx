@@ -19,9 +19,14 @@ export default function Navbar() {
           href="#hero"
           className="font-serif text-base sm:text-xl md:text-2xl font-bold text-[#1c1c19] dark:text-[#fcf9f4] hover:opacity-80 transition-opacity"
         >
-          <div className="flex items-center gap-2 font-headline">
-            <PixelChar className="scale-[0.8] origin-left mr-2" />
-            <span>IMERSÃO Claude Code</span>
+          <div className="flex items-center gap-3 font-headline">
+            <PixelChar className="scale-[0.8] origin-left" />
+            <div className="flex flex-col leading-none">
+              <span>IMERSÃO Claude Code</span>
+              <span className="font-label text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-primary font-bold opacity-80 mt-1">
+                Método 99LabDev
+              </span>
+            </div>
           </div>
         </a>
 

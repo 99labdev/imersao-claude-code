@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-6">
         <img
           alt="99labdev — Tecnologia e IA"
-          className="h-10 md:h-12 w-auto object-contain opacity-90"
+          className="h-10 md:h-12 w-auto object-contain invert brightness-0 opacity-90"
           src={logo}
         />
         <div className="flex items-center gap-6 font-label text-xs uppercase tracking-widest opacity-70">

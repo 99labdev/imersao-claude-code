@@ -7,7 +7,7 @@ export default function Hero() {
       className="relative max-w-7xl mx-auto px-4 sm:px-8 py-8 md:py-16 scroll-mt-24"
     >
       {/* Floating "100 VAGAS" badge */}
-      <div className="absolute top-4 right-4 sm:top-6 sm:right-8 z-30 rotate-6">
+      <div className="absolute top-4 right-4 sm:top-6 sm:right-8 lg:-top-2 lg:-right-2 xl:-right-6 z-30 rotate-6">
         <div className="bg-error text-white border-2 border-white/30 shadow-2xl px-4 py-3 rounded-2xl animate-pulse">
           <p className="font-label text-[10px] uppercase tracking-widest opacity-90">Apenas</p>
           <p className="font-headline text-2xl md:text-3xl font-bold leading-none">100 VAGAS</p>

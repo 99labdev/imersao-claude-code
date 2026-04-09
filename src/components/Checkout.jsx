@@ -94,7 +94,7 @@ export default function Checkout() {
               Investimento · Lote Promocional
             </p>
             <div className="flex items-baseline gap-3">
-              <span className="font-label text-xl opacity-40 line-through">R$ 497</span>
+              <span className="font-label text-xl opacity-40 line-through">R$ 247</span>
               <span className="font-headline text-6xl md:text-7xl font-bold text-primary-container leading-none">
                 R$ 47
               </span>
