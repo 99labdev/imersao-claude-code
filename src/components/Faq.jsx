@@ -3,27 +3,31 @@ import { useState } from 'react'
 const FAQS = [
   {
     q: 'Onde acontece o evento?',
-    a: '100% online, ao vivo pelo Zoom. São 100 vagas para garantir uma experiência de implementação de qualidade, com possibilidade de interação em tempo real.',
+    a: '100% online, ao vivo pelo Zoom, você participa de onde estiver. Câmera é opcional, chat fica aberto o tempo todo para perguntas.',
   },
   {
-    q: 'Não tenho experiência técnica. Vou conseguir implementar?',
-    a: 'Sim. Não é necessário nenhum conhecimento de programação, nem experiência prévia com I.A. Você aprende a instruir o Claude em português e ele executa. A barreira técnica não existe nessa imersão.',
+    q: 'Não tenho experiência técnica. Vou conseguir acompanhar?',
+    a: 'Sim. A imersão foi desenhada para quem não programa. Se você sabe instalar um aplicativo e seguir instruções na tela, você consegue. Eu faço junto com você, passo a passo.',
   },
   {
-    q: 'Serve para qualquer tipo de empresa ou só para infoprodutos?',
-    a: 'Para qualquer empresa, de qualquer nicho. Agência de marketing, e-commerce, negócio de serviços, infoproduto, empresa com time ou empresário solo. O sistema se adapta ao tipo de operação que você tem.',
+    q: 'Serve para qualquer tipo de empresa ou só para tech?',
+    a: 'Qualquer tipo. O método funciona para escritórios de advocacia, consultorias, e-commerces, agências, freelancers e profissionais liberais de todos os nichos. Se você tem tarefas repetitivas na operação, funciona.',
   },
   {
     q: 'A imersão ficará gravada?',
-    a: 'A imersão acontece ao vivo e você deve participar no dia 2 de Maio. Mas na hora de finalizar sua inscrição, você terá a opção de adquirir o acesso à gravação.',
+    a: 'Não. Mas você pode comprar a gravação e rever quantas vezes quiser.',
+  },
+  {
+    q: 'Preciso assinar o Claude para participar?',
+    a: 'O Claude tem uma versão gratuita que funciona. Para usar Claude Code, existe um custo de uso baseado em consumo. No início da imersão, eu explico exatamente o que você precisa e como configurar com o menor custo possível.',
+  },
+  {
+    q: 'Quanto tempo até eu ver resultado?',
+    a: 'Dentro da própria imersão. A proposta é que você saia com direção clara e tarefas funcionando. Se você acompanhar ao vivo e replicar, sai no mesmo dia com automações rodando.',
   },
   {
     q: 'Tem garantia?',
-    a: 'Sim. 7 dias de garantia incondicional. Se não ficar satisfeito, é só solicitar o reembolso, sem perguntas e sem burocracia.',
-  },
-  {
-    q: 'Preciso assinar o Claude para aproveitar a imersão?',
-    a: 'Não. O que você vai aprender também funciona na versão gratuita. Mas você vai perceber durante a imersão que, em algum momento, investir em um plano pago fará muito sentido para o que você vai querer construir.',
+    a: '7 dias. Devolvemos 100% do valor, sem perguntas e sem burocracia.',
   },
 ]
 
@@ -31,9 +35,9 @@ export default function Faq() {
   const [open, setOpen] = useState(0)
 
   return (
-    <section id="faq" className="max-w-4xl mx-auto px-4 sm:px-8 py-12 md:py-20 relative scroll-mt-24">
+    <section id="faq" className="max-w-4xl mx-auto px-4 sm:px-8 py-20 md:py-28 relative scroll-mt-24">
       <div className="text-center mb-10 md:mb-14">
-        <p className="font-label text-xs uppercase tracking-widest text-primary opacity-70 mb-3">
+        <p className="font-label text-xs uppercase tracking-[0.3em] text-primary font-bold mb-3">
           FAQ
         </p>
         <h2 className="font-headline text-4xl md:text-6xl font-bold leading-none">
@@ -77,7 +81,7 @@ export default function Faq() {
                 }`}
               >
                 <div className="overflow-hidden">
-                  <p className="px-5 md:px-7 pb-6 font-label text-sm text-secondary leading-relaxed">
+                  <p className="px-5 md:px-7 pb-6 font-body text-sm md:text-base text-secondary leading-relaxed">
                     {item.a}
                   </p>
                 </div>

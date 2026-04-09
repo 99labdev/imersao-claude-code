@@ -2,9 +2,10 @@ import { useState } from 'react'
 import PixelChar from './PixelChar.jsx'
 
 const LINKS = [
-  { href: '#speaker', label: 'Quem palestrará' },
-  { href: '#checkout', label: 'Garanta sua vaga' },
-  { href: '#faq', label: 'Perguntas frequentes' },
+  { href: '#method', label: 'Método' },
+  { href: '#speaker', label: 'Quem lidera' },
+  { href: '#checkout', label: 'Investimento' },
+  { href: '#faq', label: 'FAQ' },
 ]
 
 export default function Navbar() {
