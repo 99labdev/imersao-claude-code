@@ -15,20 +15,28 @@ export default function Hero() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 items-center relative">
-        {/* Left: Video embed placeholder */}
-        <div className="relative w-full">
-          <div className="absolute -inset-2 bg-primary/10 rounded-3xl rotate-[-1deg]" />
-          <div className="relative aspect-video w-full bg-inverse-surface rounded-2xl border border-outline-variant/30 shadow-2xl overflow-hidden flex items-center justify-center">
-            {/* Video embed goes here */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-surface-container-lowest/80">
-              <span className="material-symbols-outlined text-6xl text-primary-container">play_circle</span>
-              <p className="font-label text-xs uppercase tracking-widest opacity-60">Embed do vídeo do Hudson</p>
-            </div>
-            {/* Terminal dots */}
-            <div className="absolute top-4 left-4 flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-error" />
-              <div className="w-3 h-3 rounded-full bg-primary" />
-              <div className="w-3 h-3 rounded-full bg-tertiary" />
+        {/* Left: Video in phone frame */}
+        <div className="relative flex justify-center">
+          <div className="relative w-[280px] sm:w-[300px] md:w-[320px]">
+            {/* Phone body */}
+            <div className="relative bg-[#1a1a1a] rounded-[2.5rem] p-3 shadow-2xl border border-white/10">
+              {/* Notch / Dynamic Island */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-[#1a1a1a] rounded-b-2xl z-10" />
+              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-[18px] bg-black rounded-full z-20" />
+              {/* Screen */}
+              <div className="relative aspect-[9/16] w-full bg-black rounded-[2rem] overflow-hidden">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/c4csF_ellkw"
+                  title="Imersão Claude Code: Método 99labdev"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              {/* Home indicator */}
+              <div className="flex justify-center mt-2">
+                <div className="w-28 h-1 bg-white/30 rounded-full" />
+              </div>
             </div>
           </div>
         </div>
