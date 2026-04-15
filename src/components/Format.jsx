@@ -3,7 +3,6 @@ export default function Format() {
     { label: 'Quando', value: '2 de maio, sábado', icon: 'calendar_month' },
     { label: 'Horário', value: '14h às 18h (Brasília)', icon: 'schedule' },
     { label: 'Onde', value: 'Zoom ao vivo, chat aberto', icon: 'videocam' },
-    { label: 'Vagas', value: '100 vagas', icon: 'groups' },
     { label: 'Gravação', value: 'Não ficará gravada', icon: 'videocam_off' },
   ]
 

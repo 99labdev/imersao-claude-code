@@ -8,7 +8,7 @@ export default function FinalCta() {
         </h2>
         <div className="font-body text-base md:text-xl space-y-1 opacity-90">
           <p>2 de maio, às 14h — 4 horas ao vivo</p>
-          <p className="font-bold">R$ 47 · Apenas 100 vagas</p>
+          <p className="font-bold">R$ 47</p>
         </div>
         <div className="pt-2">
           <a

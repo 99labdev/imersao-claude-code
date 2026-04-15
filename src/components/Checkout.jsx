@@ -128,7 +128,7 @@ export default function Checkout() {
           </a>
 
           <p className="mt-4 text-center font-label text-[10px] uppercase tracking-widest opacity-60">
-            Apenas 100 vagas · Pagamento 100% seguro pela Kiwify · Garantia de 7 dias
+            Pagamento 100% seguro pela Kiwify · Garantia de 7 dias
           </p>
         </div>
       </div>
